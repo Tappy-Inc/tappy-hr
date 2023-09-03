@@ -1,0 +1,64 @@
+{
+  "name": "employee-portal-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/employee-portal-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/employee-portal-api",
+        "main": "apps/employee-portal-api/src/main.ts",
+        "tsConfig": "apps/employee-portal-api/tsconfig.app.json",
+        "assets": ["apps/employee-portal-api/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/employee-portal-api/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "employee-portal-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "employee-portal-api:build:development"
+        },
+        "production": {
+          "buildTarget": "employee-portal-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/employee-portal-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/employee-portal-api/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,64 @@
+{
+  "name": "applicant-tracking-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/applicant-tracking-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/applicant-tracking-api",
+        "main": "apps/applicant-tracking-api/src/main.ts",
+        "tsConfig": "apps/applicant-tracking-api/tsconfig.app.json",
+        "assets": ["apps/applicant-tracking-api/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/applicant-tracking-api/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "applicant-tracking-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "applicant-tracking-api:build:development"
+        },
+        "production": {
+          "buildTarget": "applicant-tracking-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/applicant-tracking-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/applicant-tracking-api/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
