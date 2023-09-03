@@ -5,7 +5,13 @@
   "scripts": {
     "manpower-request-app": "nx serve manpower-request-app --port=4200",
     "manpower-request-api": "nx serve manpower-request-api",
-    "manpower-request": "nx run-many -t serve -p manpower-request-app manpower-request-api --parallel=5"
+    "manpower-request": "nx run-many -t serve -p manpower-request-app manpower-request-api --parallel=5",
+    "applicant-tracking-app": "nx serve applicant-tracking-app --port=4300",
+    "applicant-tracking-api": "nx serve applicant-tracking-api",
+    "applicant-tracking": "nx run-many -t serve -p applicant-tracking-app applicant-tracking-api --parallel=5",
+    "employee-portal-app": "nx serve employee-portal-app --port=4400",
+    "employee-portal-api": "nx serve employee-portal-api",
+    "employee-portal": "nx run-many -t serve -p employee-portal-app employee-portal-api --parallel=5"
   },
   "private": true,
   "devDependencies": {
