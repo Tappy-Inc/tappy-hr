@@ -2,7 +2,11 @@
   "name": "@tappy-hr/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "manpower-request-app": "nx serve manpower-request-app --port=4200",
+    "manpower-request-api": "nx serve manpower-request-api",
+    "manpower-request": "nx run-many -t serve -p manpower-request-app manpower-request-api --parallel=5"
+  },
   "private": true,
   "devDependencies": {
     "@nestjs/schematics": "^10.0.2",
