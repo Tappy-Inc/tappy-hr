@@ -11,7 +11,8 @@
     "applicant-tracking": "nx run-many -t serve -p applicant-tracking-app applicant-tracking-api --parallel=5",
     "employee-portal-app": "nx serve employee-portal-app --port=4400",
     "employee-portal-api": "nx serve employee-portal-api",
-    "employee-portal": "nx run-many -t serve -p employee-portal-app employee-portal-api --parallel=5"
+    "employee-portal": "nx run-many -t serve -p employee-portal-app employee-portal-api --parallel=5",
+    "tappy-hr-apis": "nx run-many -t serve -p manpower-request-api applicant-tracking-api employee-portal-api --parallel=5"
   },
   "private": true,
   "devDependencies": {
