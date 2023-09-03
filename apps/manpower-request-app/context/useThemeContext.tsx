@@ -47,7 +47,7 @@ const useThemeContext = () => {
 
   if (context === undefined) {
     throw new Error(
-      'useThemeContext must be used within a ThemeContextProvider',
+      'useThemeContext must be used within a ThemeContextProvider'
     );
   }
   return context;
