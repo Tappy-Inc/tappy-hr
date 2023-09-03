@@ -75,7 +75,7 @@ devDependencies:
     version: 16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(cypress@12.17.4)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6)
   '@nx/eslint-plugin':
     specifier: 16.7.4
-    version: 16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.1.0)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6)
+    version: 16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.10.0)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6)
   '@nx/jest':
     specifier: 16.7.4
     version: 16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(nx@16.7.4)(ts-node@10.9.1)(typescript@5.1.6)
@@ -152,8 +152,8 @@ devDependencies:
     specifier: 13.4.19
     version: 13.4.19(eslint@8.46.0)(typescript@5.1.6)
   eslint-config-prettier:
-    specifier: 8.1.0
-    version: 8.1.0(eslint@8.46.0)
+    specifier: 8.10.0
+    version: 8.10.0(eslint@8.46.0)
   eslint-plugin-cypress:
     specifier: ^2.13.4
     version: 2.14.0(eslint@8.46.0)
@@ -2635,10 +2635,10 @@ packages:
       - nx
     dev: true
 
-  /@nrwl/eslint-plugin-nx@16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.1.0)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6):
+  /@nrwl/eslint-plugin-nx@16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.10.0)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6):
     resolution: {integrity: sha512-/qN/Gn0f+7fxmxLO/mSacous3fkBXCeauKKIeJQl6uSi1aVhV/u4BddNK+d2zn5WNN/xBI+xZThM+DYJMsiXjA==}
     dependencies:
-      '@nx/eslint-plugin': 16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.1.0)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6)
+      '@nx/eslint-plugin': 16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.10.0)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -2950,7 +2950,7 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@nx/eslint-plugin@16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.1.0)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6):
+  /@nx/eslint-plugin@16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.10.0)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6):
     resolution: {integrity: sha512-PjpXeW/Tr/y/PJSEaB9X2xNaqW6mYXzcFSAXQrlxuDNdVEtrieSj+OiAGKfaYjkcN1d/X9dupV6b/L0V+HcSlw==}
     peerDependencies:
       '@typescript-eslint/parser': ^5.60.1
@@ -2959,7 +2959,7 @@ packages:
       eslint-config-prettier:
         optional: true
     dependencies:
-      '@nrwl/eslint-plugin-nx': 16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.1.0)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6)
+      '@nrwl/eslint-plugin-nx': 16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@8.10.0)(eslint@8.46.0)(nx@16.7.4)(typescript@5.1.6)
       '@nx/devkit': 16.7.4(nx@16.7.4)
       '@nx/js': 16.7.4(@swc/core@1.3.82)(@types/node@18.14.2)(nx@16.7.4)(typescript@5.1.6)
       '@typescript-eslint/parser': 5.62.0(eslint@8.46.0)(typescript@5.1.6)
@@ -2967,7 +2967,7 @@ packages:
       '@typescript-eslint/utils': 5.62.0(eslint@8.46.0)(typescript@5.1.6)
       chalk: 4.1.2
       confusing-browser-globals: 1.0.11
-      eslint-config-prettier: 8.1.0(eslint@8.46.0)
+      eslint-config-prettier: 8.10.0(eslint@8.46.0)
       jsonc-eslint-parser: 2.3.0
       semver: 7.5.3
       tslib: 2.6.2
@@ -6673,8 +6673,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-config-prettier@8.1.0(eslint@8.46.0):
-    resolution: {integrity: sha512-oKMhGv3ihGbCIimCAjqkdzx2Q+jthoqnXSP+d86M9tptwugycmTFdVR4IpLgq2c4SHifbwO90z2fQ8/Aio73yw==}
+  /eslint-config-prettier@8.10.0(eslint@8.46.0):
+    resolution: {integrity: sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
